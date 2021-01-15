@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import CornerstoneViewport from 'react-cornerstone-viewport';
+import initCornerstone from "../cornerstone/initCornerstone";
+
 const stack1 = [
     'dicomweb://s3.amazonaws.com/lury/PTCTStudy/1.3.6.1.4.1.25403.52237031786.3872.20100510032220.7.dcm',
     'dicomweb://s3.amazonaws.com/lury/PTCTStudy/1.3.6.1.4.1.25403.52237031786.3872.20100510032220.8.dcm',
@@ -55,6 +57,10 @@ class Viewer extends Component {
         isPlaying: false,
         frameRate: 22,
     };
+
+    componentWillMount() {
+        initCornerstone();
+    }
 
     componentDidMount() {}
 
