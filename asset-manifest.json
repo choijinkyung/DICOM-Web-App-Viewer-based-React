@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CloudAppPACS/static/css/main.6e3aa63d.chunk.css",
+    "main.js": "/CloudAppPACS/static/js/main.315708a1.chunk.js",
+    "main.js.map": "/CloudAppPACS/static/js/main.315708a1.chunk.js.map",
+    "runtime-main.js": "/CloudAppPACS/static/js/runtime-main.cad0fe39.js",
+    "runtime-main.js.map": "/CloudAppPACS/static/js/runtime-main.cad0fe39.js.map",
+    "static/js/2.7b5a0140.chunk.js": "/CloudAppPACS/static/js/2.7b5a0140.chunk.js",
+    "static/js/2.7b5a0140.chunk.js.map": "/CloudAppPACS/static/js/2.7b5a0140.chunk.js.map",
+    "index.html": "/CloudAppPACS/index.html",
+    "static/css/main.6e3aa63d.chunk.css.map": "/CloudAppPACS/static/css/main.6e3aa63d.chunk.css.map",
+    "static/js/2.7b5a0140.chunk.js.LICENSE.txt": "/CloudAppPACS/static/js/2.7b5a0140.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cad0fe39.js",
+    "static/js/2.7b5a0140.chunk.js",
+    "static/css/main.6e3aa63d.chunk.css",
+    "static/js/main.315708a1.chunk.js"
+  ]
+}
