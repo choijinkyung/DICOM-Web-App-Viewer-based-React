@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-
-
 // Routes
-import Viewer from './Viewer/Viewer.js';
+import Viewer from './Component/Viewer.js';
 
 function ExampleEntry({ title, url, text }) {
   return (
