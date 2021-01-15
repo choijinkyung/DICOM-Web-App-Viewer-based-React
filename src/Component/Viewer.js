@@ -67,11 +67,117 @@ class Viewer extends Component {
     render() {
         return (
             <div>
-                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                <div >
+                    {/* FORM */}
+                    <div className={'left'}>
+                        <form className="row">
+                            {/* FIRST COLUMN */}
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <label htmlFor="active-tool">Active Tool:</label>
+                                    <select
+                                        value={this.state.activeTool}
+                                        onChange={evt =>
+                                            this.setState({ activeTool: evt.target.value })
+                                        }
+                                        className="form-control"
+                                        id="active-tool"
+                                    >
+                                        <option value="Wwwc">Wwwc</option>
+                                        <option value="Zoom">Zoom</option>
+                                        <option value="Pan">Pan</option>
+                                        <option value="Length">Length</option>
+                                        <option value="Angle">Angle</option>
+                                        <option value="Bidirectional">Bidirectional</option>
+                                        <option value="FreehandRoi">Freehand</option>
+                                        <option value="Eraser">Eraser</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="image-id-index">Image ID Index:</label>
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max={this.state.imageIds.length - 1}
+                                        value={this.state.imageIdIndex}
+                                        onChange={evt =>
+                                            this.setState({ imageIdIndex: parseInt(evt.target.value) })
+                                        }
+                                        className="form-control"
+                                        id="image-id-index"
+                                    ></input>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="image-id-stack">Image ID Stack:</label>
+                                    <select
+                                        defaultValue={1}
+                                        onChange={evt => {
+                                            const selectedStack =
+                                                parseInt(evt.target.value) === 1 ? stack1 : stack2;
+
+                                            this.setState({
+                                                imageIds: selectedStack,
+                                                imageIdIndex: 0,
+                                            });
+                                        }}
+                                        className="form-control"
+                                        id="image-id-stack"
+                                    >
+                                        <option value="1">Stack 1</option>
+                                        <option value="2">Stack 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            {/* SECOND COLUMN */}
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <label htmlFor="active-viewport-index">
+                                        Active Viewport Index:
+                                    </label>
+                                    <input
+                                        type="text"
+                                        readOnly={true}
+                                        value={this.state.activeViewportIndex}
+                                        className="form-control"
+                                        id="active-viewport-index"
+                                    ></input>
+                                </div>
+                                <div className="input-group">
+                                    <span className="input-group-btn">
+                                      <button
+                                          className="btn btn-default"
+                                          type="button"
+                                          onClick={() => {
+                                              this.setState({
+                                                  isPlaying: !this.state.isPlaying,
+                                              });
+                                          }}
+                                      >
+                                        {this.state.isPlaying ? 'Stop' : 'Start'}
+                                      </button>
+                                    </span>
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        value={this.state.frameRate}
+                                        onChange={evt => {
+                                            const frameRateInput = parseInt(evt.target.value);
+                                            const frameRate = Math.max(Math.min(frameRateInput, 90), 1);
+
+                                            this.setState({ frameRate });
+                                        }}
+                                    />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                <div className='right' style={{ display: 'flex', flexWrap: 'wrap' }}>
                     {this.state.viewports.map(vp => (
                         <CornerstoneViewport
                             key={vp}
-                            style={{ minWidth: '50%', height: '256px', flex: '1' }}
+                            style={{ minWidth:'40%', height: '460px', flex:1}}
                             tools={this.state.tools}
                             imageIds={this.state.imageIds}
                             imageIdIndex={this.state.imageIdIndex}
@@ -88,110 +194,7 @@ class Viewer extends Component {
                     ))}
                 </div>
 
-                {/* FORM */}
-                <div style={{ marginTop: '35px' }}>
-                    <form className="row">
-                        {/* FIRST COLUMN */}
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="active-tool">Active Tool:</label>
-                                <select
-                                    value={this.state.activeTool}
-                                    onChange={evt =>
-                                        this.setState({ activeTool: evt.target.value })
-                                    }
-                                    className="form-control"
-                                    id="active-tool"
-                                >
-                                    <option value="Wwwc">Wwwc</option>
-                                    <option value="Zoom">Zoom</option>
-                                    <option value="Pan">Pan</option>
-                                    <option value="Length">Length</option>
-                                    <option value="Angle">Angle</option>
-                                    <option value="Bidirectional">Bidirectional</option>
-                                    <option value="FreehandRoi">Freehand</option>
-                                    <option value="Eraser">Eraser</option>
-                                </select>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="image-id-index">Image ID Index:</label>
-                                <input
-                                    type="range"
-                                    min="0"
-                                    max={this.state.imageIds.length - 1}
-                                    value={this.state.imageIdIndex}
-                                    onChange={evt =>
-                                        this.setState({ imageIdIndex: parseInt(evt.target.value) })
-                                    }
-                                    className="form-control"
-                                    id="image-id-index"
-                                ></input>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="image-id-stack">Image ID Stack:</label>
-                                <select
-                                    defaultValue={1}
-                                    onChange={evt => {
-                                        const selectedStack =
-                                            parseInt(evt.target.value) === 1 ? stack1 : stack2;
-
-                                        this.setState({
-                                            imageIds: selectedStack,
-                                            imageIdIndex: 0,
-                                        });
-                                    }}
-                                    className="form-control"
-                                    id="image-id-stack"
-                                >
-                                    <option value="1">Stack 1</option>
-                                    <option value="2">Stack 2</option>
-                                </select>
-                            </div>
-                        </div>
-                        {/* SECOND COLUMN */}
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="active-viewport-index">
-                                    Active Viewport Index:
-                                </label>
-                                <input
-                                    type="text"
-                                    readOnly={true}
-                                    value={this.state.activeViewportIndex}
-                                    className="form-control"
-                                    id="active-viewport-index"
-                                ></input>
-                            </div>
-                            <div className="input-group">
-                <span className="input-group-btn">
-                  <button
-                      className="btn btn-default"
-                      type="button"
-                      onClick={() => {
-                          this.setState({
-                              isPlaying: !this.state.isPlaying,
-                          });
-                      }}
-                  >
-                    {this.state.isPlaying ? 'Stop' : 'Start'}
-                  </button>
-                </span>
-                                <input
-                                    type="number"
-                                    className="form-control"
-                                    value={this.state.frameRate}
-                                    onChange={evt => {
-                                        const frameRateInput = parseInt(evt.target.value);
-                                        const frameRate = Math.max(Math.min(frameRateInput, 90), 1);
-
-                                        this.setState({ frameRate });
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    </form>
                 </div>
-
             </div>
         );
     }
