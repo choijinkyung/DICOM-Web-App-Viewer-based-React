@@ -26,7 +26,7 @@ npm install [모듈이름] or yarn add [모듈이름]으로 설치
 2)	Xcode에서 Viewer_ios.zip 열기
 3)	device연결하고 실행
 
-'''
+```
 MIT License
 
 Copyright (c) 2021 j_iky
@@ -48,4 +48,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-'''
+```
