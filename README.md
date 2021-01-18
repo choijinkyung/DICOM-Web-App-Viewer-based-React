@@ -27,7 +27,7 @@ npm install [모듈이름] or yarn add [모듈이름]으로 설치
 3)	device연결하고 실행
 
 
-###LICENSE
+### LICENSE
 ```
 MIT License
 
