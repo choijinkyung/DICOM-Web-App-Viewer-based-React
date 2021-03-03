@@ -1,30 +1,30 @@
-<h1> Cloud App PACS </h1>
+<h1> DICOM Web Viewer based React </h1>
 <br/>
 
 ![image](https://user-images.githubusercontent.com/44565579/104865194-b1487800-597e-11eb-94b3-302764cb6b34.png)
 
-## < 개발 환경 setting >
+## < Environment setting >
 ### Viewer code (React) (Window, Mac)
-: 리액트로 작성한 웹 뷰어 코드
-1)	VSCode로 Viewer_React.zip 열기
-2)	Terminal에서 npm install 명령어 입력 ( package.json 모듈 설치 )
-If 모듈이 설치가 안될 시, 
-npm install [모듈이름] or yarn add [모듈이름]으로 설치 
-( 사전에 npm install yarn 실행 ) 
-3)	local에서 실행 시
--	npm run start 명령어 입력 (localhost:3000)
+: Web Viewer Code developed with React
+1)	Open Viewer_React.zip in your Editor (VScode)
+2)	npm install( Install package.json )
+If the module cannot be installed, 
+<br/> Run npm install [module name] or yarn add [module name] 
+<br/>(Run npm install yarn beforehand)
+3)	Run in Local
+-	npm run start (localhost:3000)
 
 ### Android (Windos, Mac)
-: Java로 작성한 Webview code
-1)	Android Studio 설치 (https://developer.android.com/studio)
-2)	Android Studio에서 Viewer_Android.zip 열기
-3)	Device 연결하고, 실행
+: native Java code - Android App Viewer
+1)	Install Android Studio (https://developer.android.com/studio)
+2)	Open Viewer_Android.zip in Android Studio  
+3)	Connect Android Device , Run
 
 ### ios(Mac)
-: Swift로 작성한 Webview code
-1)	Xcode 설치 (Mac App store에서 설치 가능)
-2)	Xcode에서 Viewer_ios.zip 열기
-3)	device연결하고 실행
+: native Swift code - IOS App Viewer
+1)	Install Xcode (Can be installed in App store)
+2)  Open Viewer_ios.zip in Xcode 
+3)	Connect Ios device, Run
 
 
 ### LICENSE
