@@ -2,9 +2,6 @@
 <br/>
 
 ![image](https://user-images.githubusercontent.com/44565579/104865194-b1487800-597e-11eb-94b3-302764cb6b34.png)
-
-## DEMO
-https://choijinkyung.github.io/DICOM-Web-App-Viewer-based-React/
  
 ## < Environment setting >
 ### Viewer code (React) (Window, Mac)
