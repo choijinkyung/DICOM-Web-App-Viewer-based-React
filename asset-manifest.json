@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a567f92.chunk.css",
-    "main.js": "/static/js/main.d93a9d35.chunk.js",
-    "main.js.map": "/static/js/main.d93a9d35.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7fb22217.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7fb22217.js.map",
-    "static/js/2.af01bdf3.chunk.js": "/static/js/2.af01bdf3.chunk.js",
-    "static/js/2.af01bdf3.chunk.js.map": "/static/js/2.af01bdf3.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.1a567f92.chunk.css.map": "/static/css/main.1a567f92.chunk.css.map",
-    "static/js/2.af01bdf3.chunk.js.LICENSE.txt": "/static/js/2.af01bdf3.chunk.js.LICENSE.txt"
+    "main.css": "/DICOM-Web-App-Viewer-based-React/static/css/main.1a567f92.chunk.css",
+    "main.js": "/DICOM-Web-App-Viewer-based-React/static/js/main.d93a9d35.chunk.js",
+    "main.js.map": "/DICOM-Web-App-Viewer-based-React/static/js/main.d93a9d35.chunk.js.map",
+    "runtime-main.js": "/DICOM-Web-App-Viewer-based-React/static/js/runtime-main.123ab8a4.js",
+    "runtime-main.js.map": "/DICOM-Web-App-Viewer-based-React/static/js/runtime-main.123ab8a4.js.map",
+    "static/js/2.af01bdf3.chunk.js": "/DICOM-Web-App-Viewer-based-React/static/js/2.af01bdf3.chunk.js",
+    "static/js/2.af01bdf3.chunk.js.map": "/DICOM-Web-App-Viewer-based-React/static/js/2.af01bdf3.chunk.js.map",
+    "index.html": "/DICOM-Web-App-Viewer-based-React/index.html",
+    "static/css/main.1a567f92.chunk.css.map": "/DICOM-Web-App-Viewer-based-React/static/css/main.1a567f92.chunk.css.map",
+    "static/js/2.af01bdf3.chunk.js.LICENSE.txt": "/DICOM-Web-App-Viewer-based-React/static/js/2.af01bdf3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7fb22217.js",
+    "static/js/runtime-main.123ab8a4.js",
     "static/js/2.af01bdf3.chunk.js",
     "static/css/main.1a567f92.chunk.css",
     "static/js/main.d93a9d35.chunk.js"
