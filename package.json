@@ -45,7 +45,7 @@
   "devDependencies": {
     "cornerstone-core": "^2.3.0",
     "cornerstone-tools": "^5.1.2",
-    "gh-pages": "^3.2.3",
+    "gh-pages": "^5.0.0",
     "react-router-dom": "^5.2.0"
   },
   "homepage": "https://choijinkyung.github.io/DICOM-Web-App-Viewer-based-React/"
